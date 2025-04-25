@@ -17,15 +17,15 @@ body.light-mode {
 
 button.darkmode-button {
   background: transparent;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid rgb(228, 228, 228);
+  color: rgb(228, 228, 228);
   padding: 4px 8px;
   border-radius: 20px;
   font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px; /* adjust this value as needed */
-  vertical-align: middle; /* helps align inline with text */
+  margin-top: 8px;
+  vertical-align: middle;
 }
 
 button.darkmode-button:hover {
