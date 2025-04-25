@@ -4,7 +4,7 @@ const MyFoot = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-center text-white mt-5">
+    <footer className="bg-dark text-center text-white">
       <div
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
@@ -12,6 +12,7 @@ const MyFoot = () => {
         © {currentYear} Copyright: FilmGram
       </div>
     </footer>
+
   );
 };
 

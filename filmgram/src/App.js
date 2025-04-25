@@ -10,20 +10,21 @@ import NotFound from './pages/NotFound';
 import MyFoot from './components/MyFoot';
 import SearchResults from './pages/SearchResults';
 
-
 function App() {
   return (
-    <div className="App">
+    <div className="App d-flex flex-column min-vh-100">
       <Router>
         <MyNav />
-        <Routes>
-          <Route path="/" index element={<Home/>}/>
-          <Route path="/popular" element={<Popular/>} />
-          <Route path="/top-rated" element={<TopRated/>} />
-          <Route path="/upcoming" element={<UpComing/>} />
-          <Route path="/search" element={<SearchResults />} />
-          <Route path="*" element={<NotFound/>} />
-        </Routes>
+        <main className="flex-grow-1">
+          <Routes>
+            <Route path="/" index element={<Home />} />
+            <Route path="/popular" element={<Popular />} />
+            <Route path="/top-rated" element={<TopRated />} />
+            <Route path="/upcoming" element={<UpComing />} />
+            <Route path="/search" element={<SearchResults />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
         <MyFoot />
       </Router>
     </div>
