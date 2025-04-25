@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { BsFilm } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
+import DarkModeToggle from "./DarkModeToggle";
 
 const MyNav = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -23,7 +24,6 @@ const MyNav = () => {
             console.error("Search failed:", error);
         }
     };
-
 
     return (
         <>
@@ -61,55 +61,37 @@ const MyNav = () => {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/upcoming">Up Coming</Link>
                             </li>
+                            <li className="nav-item">
+                                <div className="nav-link p-0">
+                                    <DarkModeToggle />
+                                </div>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
             </nav>
 
             <div className="container-fluid fs-5 p-3 pe-5" style={{ backgroundColor: "rgba(36, 39, 51, 0.75)" }}>
-                <div className="row justify-content-between gx-5 align-items-center">
-                    <div className="col-md-3 col-sm-12 mb-2">
-                        <form className="d-flex flex-row gap-3 justify-content-center align-items-center" onSubmit={handleSearchSubmit}>
+                <div className="row justify-content-end">
+                    <div className="col-auto">
+                        <form className="d-flex gap-3 align-items-center" onSubmit={handleSearchSubmit}>
                             <input
                                 type="text"
-                                className="form-control form-control-sm"
+                                className="form-control-sm form-control"
                                 placeholder="Search for movies..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                style={{ borderRadius: "20px", paddingLeft: "15px" }}
+                                style={{ borderRadius: "20px", paddingLeft: "15px", width: "300px" }}
                             />
-                            <BsSearch className="fs-4" />
+                            <BsSearch className="fs-4" style={{ color: "white" }} />
                         </form>
-                    </div>
-
-                    <div className="col-md-9 col-sm-12">
-                        <div className="row justify-content-end gx-3">
-                            <div className="col-auto">
-                                <p className="mb-0" style={{ cursor: "pointer" }}>8+ star</p>
-                            </div>
-                            <div className="col-auto">
-                                <p className="mb-0" style={{ cursor: "pointer" }}>7+ star</p>
-                            </div>
-                            <div className="col-auto">
-                                <p className="mb-0" style={{ cursor: "pointer" }}>6+ star</p>
-                            </div>
-                            <div className="col-auto">
-                                <select className="form-select form-select-sm" style={{ cursor: "pointer" }} aria-label="Sort Select">
-                                    <option>SortBy</option>
-                                    <option>Date</option>
-                                    <option>Rating</option>
-                                </select>
-                            </div>
-                            <div className="col-auto">
-                                <select className="form-select form-select-sm" style={{ cursor: "pointer" }} aria-label="Order Select">
-                                    <option>Ascending</option>
-                                    <option>Descending</option>
-                                </select>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+
+
+
         </>
     );
 };
