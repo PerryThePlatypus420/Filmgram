@@ -8,6 +8,7 @@ import Popular from './pages/Popular';
 import TopRated from './pages/TopRated';
 import NotFound from './pages/NotFound';
 import MyFoot from './components/MyFoot';
+import SearchResults from './pages/SearchResults';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/popular" element={<Popular/>} />
           <Route path="/top-rated" element={<TopRated/>} />
           <Route path="/upcoming" element={<UpComing/>} />
+          <Route path="/search" element={<SearchResults />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
         <MyFoot />

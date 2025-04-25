@@ -42,7 +42,7 @@ const Home = () => {
   }
 
   return (
-    <div className="container-fluid mt-4 px-5">
+    <div className="container-fluid mt-5 px-5">
       <h2>Now Playing</h2>
       <MoviesList movies={movies} />
     </div>

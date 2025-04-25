@@ -45,7 +45,7 @@ const TopRated = () => {
     }
 
     return (
-        <div className="container-fluid mt-4 px-5">
+        <div className="container-fluid mt-5 px-5">
             <h2>Top Rated</h2>
             <MoviesList movies={movies} />
         </div>
