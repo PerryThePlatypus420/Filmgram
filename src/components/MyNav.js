@@ -33,7 +33,7 @@ const MyNav = ({ isDarkMode, toggleDarkMode }) => {
                     <Link
                         className="navbar-brand fs-3 fw-bold d-flex flex-row justify-content-center align-items-center gap-3"
                         to="/"
-                        style={{ color:"white"}}
+                        style={{ color: "white" }}
                     >
                         <BsFilm />
                         <div>FilmGram</div>
@@ -54,13 +54,13 @@ const MyNav = ({ isDarkMode, toggleDarkMode }) => {
                     <div className="collapse navbar-collapse fs-5" id="navbarContent">
                         <ul className="navbar-nav ms-auto gap-4">
                             <li className="nav-item">
-                                <Link className="nav-link" style={{color: isDarkMode ? "" : "white"}} to="/popular">Popular</Link>
+                                <Link className="nav-link" style={{ color: isDarkMode ? "" : "white" }} to="/popular">Popular</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" style={{color: isDarkMode ? "" : "white"}} to="/top-rated">Top Rated</Link>
+                                <Link className="nav-link" style={{ color: isDarkMode ? "" : "white" }} to="/top-rated">Top Rated</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" style={{color: isDarkMode ? "" : "white"}} to="/upcoming">Up Coming</Link>
+                                <Link className="nav-link" style={{ color: isDarkMode ? "" : "white" }} to="/upcoming">Up Coming</Link>
                             </li>
                             <li className="nav-item">
                                 <div className="nav-link p-0">
@@ -84,8 +84,15 @@ const MyNav = ({ isDarkMode, toggleDarkMode }) => {
                                 onChange={(e) => setSearchTerm(e.target.value)}
                                 style={{ borderRadius: "20px", paddingLeft: "15px", width: "300px" }}
                             />
-                            <BsSearch className="fs-4" style={{ color: isDarkMode ? "white" : "black" }} />
+                            <button
+                                type="submit"
+                                className="btn p-0 m-0 border-0 bg-transparent"
+                                style={{ lineHeight: 1 }}
+                            >
+                                <BsSearch className="fs-4" style={{ color: isDarkMode ? "white" : "black" }} />
+                            </button>
                         </form>
+
                     </div>
                 </div>
             </div>
