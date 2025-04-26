@@ -54,13 +54,13 @@ const MyNav = ({ isDarkMode, toggleDarkMode }) => {
                     <div className="collapse navbar-collapse fs-5" id="navbarContent">
                         <ul className="navbar-nav ms-auto gap-4">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/popular">Popular</Link>
+                                <Link className="nav-link" style={{color: isDarkMode ? "" : "white"}} to="/popular">Popular</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/top-rated">Top Rated</Link>
+                                <Link className="nav-link" style={{color: isDarkMode ? "" : "white"}} to="/top-rated">Top Rated</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/upcoming">Up Coming</Link>
+                                <Link className="nav-link" style={{color: isDarkMode ? "" : "white"}} to="/upcoming">Up Coming</Link>
                             </li>
                             <li className="nav-item">
                                 <div className="nav-link p-0">
@@ -72,7 +72,7 @@ const MyNav = ({ isDarkMode, toggleDarkMode }) => {
                 </div>
             </nav>
 
-            <div className="container-fluid fs-5 p-3 pe-5" style={{ backgroundColor: isDarkMode ? "rgba(56, 72, 136, 0.5)" : "rgba(70, 136, 161, 0.34)" }}>
+            <div className="container-fluid fs-5 p-3 pe-5" style={{ backgroundColor: isDarkMode ? "rgba(56, 72, 136, 0.5)" : "rgba(117, 70, 161, 0.34)" }}>
                 <div className="row justify-content-end">
                     <div className="col-auto">
                         <form className="d-flex gap-3 align-items-center" onSubmit={handleSearchSubmit}>
