@@ -24,5 +24,5 @@ FilmGram is a modern and responsive web application for movie enthusiasts. It al
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/PerryThePlatypus420/filmgram.git
-   cd filmgram
+   git clone https://github.com/PerryThePlatypus420/Filmgram.git
+   cd Filmgram
